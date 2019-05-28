@@ -1,0 +1,3 @@
+const errorsReducer = ( state = {}, action ) => {
+
+};
