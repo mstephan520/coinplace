@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({currentUser, logout}) => {
+const Nav = ({currentUser, logout}) => {
     const loggedIn = () => {
         debugger;
         return (
@@ -26,4 +26,4 @@ const Greeting = ({currentUser, logout}) => {
     return currentUser ? loggedIn() : loggedOut();
 };
 
-export default Greeting;
+export default Nav;
