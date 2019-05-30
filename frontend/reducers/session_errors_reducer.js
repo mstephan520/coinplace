@@ -1,7 +1,7 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from "../actions/session_actions";
 import { merge } from 'lodash';
 
-const sessionErrorsReducer = ( state = [], action ) => {
+const sessionErrorsReducer = ( state = {errors: []}, action ) => {
     Object.freeze(state)
 
     switch(action.type) {

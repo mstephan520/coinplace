@@ -53,13 +53,42 @@ class SessionForm extends React.Component {
     }
  
     render() {
+        const nameFields = () => {
+            if (this.props.formType === 'signup') {
+                return (
+                    <div>
+                        <br />
+
+                        <label>First Name
+                                <input
+                                type="text"
+                                placeholder='First Name'
+                                value={this.state.first_name}
+                                onChange={this.update('first_name')} />
+                        </label>
+                        <br />
+                        <label>Last Name
+                                <input
+                                type="text"
+                                placeholder='First Name'
+                                value={this.state.last_name}
+                                onChange={this.update('last_name')} />
+                        </label>
+                    </div>
+                );
+            }
+            else {
+                return null;
+            }
+        }
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     {this.formType === 'login' ? 'Sign in to Coinplace' : 'Create your account' }
                     <br/>
                     <div>
-                        {this.nameFields()}
+                        {nameFields()}
                         <br/>
                         <label>Email
                             <input 
