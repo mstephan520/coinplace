@@ -46,6 +46,30 @@ class SessionForm extends React.Component {
             }
         }
 
+        const stateField = () => {
+            let statesArr = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+
+            let allStates = statesArr.map(state => {
+                return <option className="singleState" value={state}>{state}</option>
+                });
+
+            if (this.props.formType === 'Create account') {
+                return (
+                    <div className="outerStatesContainer">
+                        <label>State</label>
+                        <div className="innerStatesContainer">
+                            <select className="states" defaultValue='Select a state'>
+                                {/* <option value="Choose a State">Choose a State</option> */}
+                                {allStates}
+                            </select>
+                        </div>
+                    </div>
+                )
+            } else {
+                return null;
+            }
+        }
+
         return (
             <div className="signup_background">
                 <div className="mainPage">
@@ -60,9 +84,10 @@ class SessionForm extends React.Component {
 
                                 <label>Password</label>
                                 <input type="password" placeholder='Choose a password' value={this.state.password} onChange={this.update('password')}/>
+                                {stateField()}
                                 <input type="submit" value={this.props.formType} className="submitButton"/>
                             </div>
-                        
+
                         </form>
                     </div>
                 </div>

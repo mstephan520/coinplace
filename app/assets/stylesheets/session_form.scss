@@ -57,6 +57,39 @@ input[type=password] {
     height: 39px;
 }
 
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-decoration: none;
+    margin-bottom: 31px;
+    padding: 12px;
+    padding-left: 20px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    background: none;
+    font-size: 16px;
+    width: 432px;
+    // padding-left: 100px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    height: 65px;
+}
+
+select:focus {
+    border-color: rgb(22, 82, 240);
+    outline: none;
+}
+
+
+.singleState {
+    padding: 20px;
+}
+
+.innerStatesContainer {
+
+}
+
 ::placeholder {
     font-size: 16px;
     font-weight: 325;
@@ -74,13 +107,11 @@ input:focus{
 }
 
 
-
 .credentials {
     width: 432px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 label {
