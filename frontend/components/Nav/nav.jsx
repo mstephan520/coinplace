@@ -15,8 +15,8 @@ const Nav = ({currentUser, logout}) => {
     const loggedOut = () => {
        return (
             <div className="loggedOut">
-               <div><Link className="signInLink" to="/signin">Sign in</Link></div>
-               <div ><Link className="signUpLink"to="/signup">Get started</Link></div>
+               <Link className="signInLink" to="/signin">Sign in</Link>
+               <Link className="signUpLink"to="/signup">Get started</Link>
             </div>
        )
     };
