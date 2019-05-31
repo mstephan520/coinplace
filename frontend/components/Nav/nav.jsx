@@ -5,25 +5,36 @@ const Nav = ({currentUser, logout}) => {
     const loggedIn = () => {
         debugger;
         return (
-            <nav>
+            <div className="loggedIn">
                 <h2>{currentUser.firstname + currentUser.lastname}</h2>
                 <button onClick={logout}>Sign Out</button>
-            </nav>
+            </div>
         )
     };
     
     const loggedOut = () => {
        return (
-            <nav>
-                <Link to="/signin">Sign in</Link>
-                &nbsp;or&nbsp;
-                <Link to="/signup">Get started</Link>
-            </nav>
+            <div className="loggedOut">
+               <div><Link className="signInLink" to="/signin">Sign in</Link></div>
+               <div ><Link className="signUpLink"to="/signup">Get started</Link></div>
+            </div>
        )
     };
 
     return (
-        currentUser ? loggedIn() : loggedOut()
+        <nav className="navBarContainer">
+            <div className="coinplaceLogoContainer">
+                <h2 className="coinplaceLogo">coinplace</h2>
+            </div>
+
+            <div className="authNavLinksContainer">
+
+            </div>
+
+            <div className="authContainer">
+                {currentUser ? loggedIn() : loggedOut()}
+            </div>
+        </nav>
     )
 };
 

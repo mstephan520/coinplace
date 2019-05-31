@@ -5,10 +5,9 @@ import SigninFormContainer from './session_form/login_form_container';
 import Nav from './Nav/nav';
 
 const App = () => (
-    <div>
+    <div className="coinplacePage">
         <header>
             <Link to="/" className="header-link">
-                <h1>Coinplace</h1>
             </Link>
             <Nav />
         </header>
