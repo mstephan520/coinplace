@@ -1,0 +1,122 @@
+ .signup_background {
+     background: rgb(22, 82, 240);
+     height: 100vh;
+     width: 100wh;
+ }
+
+ .mainPage {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 20px;
+     padding: 12px;
+    //  border: 1px solid lightgrey;
+     border-top-left-radius: 4px;
+     background-color: rgb(22, 82, 240);
+     margin: 0, auto;
+ }
+
+ .signupHeading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 31px;
+    font-weight: 220;
+    color: white;
+    margin-bottom: 32px;
+    letter-spacing: 1px; 
+ }
+ 
+ .form_container {
+    // justify-content: center;
+    // display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 24px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+    font-family: 'Nunito', sans-serif;  
+ }
+
+ input[type=text] {
+  margin-bottom: 31px;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 4px;
+  font-size: 16px;
+  border: 1px solid rgb(236, 239, 241);
+  border-radius: 4px;
+  height: 39px;
+}
+
+input[type=password] {
+    margin-bottom: 31px;
+    padding: 12px;
+    padding-left: 20px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    height: 39px;
+}
+
+::placeholder {
+    font-size: 16px;
+    font-weight: 325;
+    color: rgb(205, 212, 216);
+    letter-spacing: 0.25px;
+}
+
+input:focus::placeholder {
+    color: rgb(22, 82, 240);
+}
+
+input:focus{
+    border-color: rgb(22, 82, 240);
+    outline: none;
+}
+
+
+
+.credentials {
+    width: 432px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+label {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+  font-weight: 1000;
+//   margin-left: 3px;
+}
+
+.signup_name {
+    display: flex;
+    flex-direction: row;
+    // margin-top: 20px;
+    justify-content: space-between;
+}
+
+.signup_name input[type=text] {
+    width: 180px;
+}
+
+.signupFirstName {
+    // padding-right: 20px;
+}
+
+input[type=submit] {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: white;
+    background:  rgb(22, 82, 240);
+    border-radius: 4px;
+    padding: 12px;
+    height: 72px;
+    transition: background, .2s;
+}
+
+.submitButton:hover {
+    background:  rgb(25, 71, 222)
+}

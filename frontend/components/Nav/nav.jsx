@@ -5,25 +5,26 @@ const Nav = ({currentUser, logout}) => {
     const loggedIn = () => {
         debugger;
         return (
-            <div>
+            <nav>
                 <h2>{currentUser.firstname + currentUser.lastname}</h2>
                 <button onClick={logout}>Sign Out</button>
-            </div>
+            </nav>
         )
     };
     
     const loggedOut = () => {
        return (
-            <div>
+            <nav>
                 <Link to="/signin">Sign in</Link>
                 &nbsp;or&nbsp;
                 <Link to="/signup">Get started</Link>
-            </div>
+            </nav>
        )
     };
 
-
-    return currentUser ? loggedIn() : loggedOut();
+    return (
+        currentUser ? loggedIn() : loggedOut()
+    )
 };
 
 export default Nav;

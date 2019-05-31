@@ -6,8 +6,8 @@ import SessionForm from './session_form';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        errors: state.errors.session.errors,
-        formType: 'signup',
+        errors: state.errors.session,
+        formType: 'Create account',
         redirect: <Link to="/signin">Already have a Coinplace account? Log in</Link>,
     };
 };

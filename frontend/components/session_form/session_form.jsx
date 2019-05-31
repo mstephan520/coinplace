@@ -22,58 +22,22 @@ class SessionForm extends React.Component {
         debugger;
         this.props.processForm(this.state);
     }
-
-    nameFields() {
-        if (this.props.formType === 'signup') {
-            return (
-                <div>
-                    <br/>
-
-                    <label>First Name
-                                <input
-                            type="text"
-                            placeholder='First Name'
-                            value={this.state.first_name}
-                            onChange={this.update('first_name')}/>
-                    </label>
-                    <br/>
-                    <label>Last Name
-                                <input
-                            type="text"
-                            placeholder='First Name'
-                            value={this.state.last_name}
-                            onChange={this.update('last_name')}/>
-                    </label>
-                </div>
-            );
-        }
-        else {
-            return null;
-        }
-    }
  
     render() {
         const nameFields = () => {
-            if (this.props.formType === 'signup') {
+            if (this.props.formType === 'Create account') {
                 return (
-                    <div>
-                        <br />
-
-                        <label>First Name
-                                <input
-                                type="text"
-                                placeholder='First Name'
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')} />
-                        </label>
-                        <br />
-                        <label>Last Name
-                                <input
-                                type="text"
-                                placeholder='First Name'
-                                value={this.state.last_name}
-                                onChange={this.update('last_name')} />
-                        </label>
+                    <div className="signup_name">
+                        <div className="signupFirstName">
+                            <label>First name</label>
+                            <input type="text" placeholder='First name' value={this.state.first_name} onChange={this.update('first_name')} />
+                        </div>
+                        
+                        <div>
+                            <label>Last name</label>
+                            <input type="text" placeholder='Last name' value={this.state.last_name} onChange={this.update('last_name')} />
+                        </div>
+                        
                     </div>
                 );
             }
@@ -83,38 +47,28 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    {this.formType === 'login' ? 'Sign in to Coinplace' : 'Create your account' }
-                    <br/>
-                    <div>
-                        {nameFields()}
-                        <br/>
-                        <label>Email
-                            <input 
-                                type="text"
-                                placeholder='Your email address'
-                                value={this.state.email}
-                                onChange={this.update('email')}/>
-                        </label>
+            <div className="signup_background">
+                <div className="mainPage">
+                    <h2 className="signupHeading">{this.props.formType === 'Sign in' ? 'Sign in to Coinplace' : 'Create your account'} </h2>
+                    <div className="form_container">
+                        <form onSubmit={this.handleSubmit}>
 
-                        <br/>
-                        <label>Password
-                            <input 
-                                type="password"
-                                placeholder='Choose a password'
-                                value={this.state.password} 
-                                onChange={this.update('password')}/>
-                        </label>
-                        <br/>
-                        <input type="submit" value={this.props.formType}/>
+                            {nameFields()}
+                            <div className="credentials">
+                                <label>Email</label>
+                                <input type="text" placeholder='Your email address' value={this.state.email} onChange={this.update('email')}/>
+
+                                <label>Password</label>
+                                <input type="password" placeholder='Choose a password' value={this.state.password} onChange={this.update('password')}/>
+                                <input type="submit" value={this.props.formType} className="submitButton"/>
+                            </div>
+                        
+                        </form>
                     </div>
-                </form>
-
-
+                </div>
             </div>
         )
     }
 }
 
-export default withRouter(SessionForm)
+export default withRouter(SessionForm);

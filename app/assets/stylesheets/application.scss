@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
+ @import 'reset.scss';
+ @import 'session_form.scss';
+ @import 'nav.scss';
+
+// h1 {
+//     justify-content: center;
+//     font-family: 'Nunito', sans-serif; 
+// }

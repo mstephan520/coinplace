@@ -13,7 +13,6 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -42,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/mstephan520/coinplace/issues"
   },
-  "homepage": "https://github.com/mstephan520/coinplace#readme"
+  "homepage": "https://github.com/mstephan520/coinplace#readme",
+  "devDependencies": {
+    "webpack": "^4.32.2"
+  }
 }
