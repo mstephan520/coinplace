@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import NavContainer from '../Nav/nav_container';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
+        // debugger;
         this.props.processForm(this.state);
     }
  
@@ -71,26 +72,30 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div className="signup_background">
-                <div className="mainPage">
-                    <h2 className="signupHeading">{this.props.formType === 'Sign in' ? 'Sign in to Coinplace' : 'Create your account'} </h2>
-                    <div className="form_container">
-                        <form onSubmit={this.handleSubmit}>
+            <div>
+                <NavContainer />
+                <div className="signup_background">
+                    <div className="mainPage">
+                        <h2 className="signupHeading">{this.props.formType === 'Sign in' ? 'Sign in to Coinplace' : 'Create your account'} </h2>
+                        <div className="form_container">
+                            <form onSubmit={this.handleSubmit}>
 
-                            {nameFields()}
-                            <div className="credentials">
-                                <label>Email</label>
-                                <input type="text" placeholder='Your email address' value={this.state.email} onChange={this.update('email')}/>
+                                {nameFields()}
+                                <div className="credentials">
+                                    <label>Email</label>
+                                    <input type="text" placeholder='Your email address' value={this.state.email} onChange={this.update('email')} />
 
-                                <label>Password</label>
-                                <input type="password" placeholder='Choose a password' value={this.state.password} onChange={this.update('password')}/>
-                                {stateField()}
-                                <input type="submit" value={this.props.formType} className="submitButton"/>
-                            </div>
+                                    <label>Password</label>
+                                    <input type="password" placeholder='Choose a password' value={this.state.password} onChange={this.update('password')} />
+                                    {stateField()}
+                                    <input type="submit" value={this.props.formType} className="submitButton" />
+                                </div>
 
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
+           
             </div>
         )
     }

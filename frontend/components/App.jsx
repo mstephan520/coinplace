@@ -4,18 +4,21 @@ import SignupFormContainer from './session_form/signup_form_container';
 import SigninFormContainer from './session_form/login_form_container';
 import Nav from './Nav/nav';
 
-const App = () => (
+const App = () => {
+    // debugger
+    return(
     <div className="coinplacePage">
-        <header>
+        {/* <header>
             <Link to="/" className="header-link">
             </Link>
             <Nav />
-        </header>
+        </header> */}
         
         <Route exact path="/signin" component={SigninFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
 
     </div>
-);
+    )
+};
 
 export default App;

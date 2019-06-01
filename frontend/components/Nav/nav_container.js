@@ -4,6 +4,7 @@ import Nav from "./nav";
 import { logout } from '../../actions/session_actions';
 
 const msp = (state = {}) => {
+    // debugger
     return(
         { currentUser: state.entities.users[state.session.id]}
     );
