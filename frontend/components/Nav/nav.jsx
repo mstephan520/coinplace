@@ -7,7 +7,7 @@ const Nav = ({currentUser, logout}) => {
         return (
             <div className="loggedIn">
                 <h2>{currentUser.email}</h2>
-                <button onClick={logout}>Sign Out</button>
+                <button onClick={logout}>Out</button>
                 <Link className="signUpLink" to="/signup">Get started</Link>
             </div>
         )
@@ -24,7 +24,7 @@ const Nav = ({currentUser, logout}) => {
     };
     // debugger
     return (
-        <nav className="navBarContainer">
+        <div className="navBarContainer">
             <div className="coinplaceLogoContainer">
                 <h2 className="coinplaceLogo">coinplace</h2>
             </div>
@@ -36,7 +36,7 @@ const Nav = ({currentUser, logout}) => {
             <div className="authContainer">
                 {currentUser ? loggedIn() : loggedOut()}
             </div>
-        </nav>
+        </div>
     )
 };
 

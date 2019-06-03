@@ -144,6 +144,10 @@ input[type=submit] {
     transition: background, .2s;
 }
 
-.submitButton:hover {
-    background:  rgb(25, 71, 222)
+input[type=submit]:hover {
+    background:  rgb(25, 71, 222);
+}
+
+.demoUser {
+    margin-top: 12px;
 }
