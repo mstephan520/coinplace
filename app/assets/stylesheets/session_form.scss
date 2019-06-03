@@ -8,7 +8,7 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     margin-bottom: 20px;
+     padding-bottom: 50px;
     //  padding: 12px;
     //  border: 1px solid lightgrey;
      border-top-left-radius: 4px;
@@ -21,7 +21,7 @@
     font-size: 31px;
     font-weight: 220;
     color: white;
-    margin-top: 90px;
+    margin-top: 84px;
     margin-bottom: 38px;
     letter-spacing: 1px; 
  }
@@ -31,6 +31,7 @@
     // display: flex;
     background-color: rgb(255, 255, 255);
     padding: 24px;
+    padding-top: 21px;
     border: 1px solid rgb(236, 239, 241);
     border-radius: 4px;
     box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
@@ -38,7 +39,7 @@
  }
 
  input[type=text] {
-  margin-bottom: 31px;
+  margin-bottom: 29px;
   padding: 12px;
   padding-left: 20px;
   padding-right: 4px;
@@ -49,13 +50,43 @@
 }
 
 input[type=password] {
-    margin-bottom: 31px;
+    margin-bottom: 29px;
     padding: 12px;
     padding-left: 20px;
     border: 1px solid rgb(236, 239, 241);
     border-radius: 4px;
     height: 39px;
 }
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-decoration: none;
+    margin-bottom: 31px;
+    padding: 12px;
+    padding-left: 20px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    background: none;
+    font-size: 16px;
+    width: 432px;
+    // padding-left: 100px;
+    border: 1px solid rgb(236, 239, 241);
+    border-radius: 4px;
+    height: 65px;
+}
+
+select:focus {
+    border-color: rgb(22, 82, 240);
+    outline: none;
+}
+
+
+.singleState {
+    padding: 20px;
+}
+
 
 ::placeholder {
     font-size: 16px;
@@ -74,17 +105,15 @@ input:focus{
 }
 
 
-
 .credentials {
     width: 432px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 label {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: block;
   font-size: 14px;
   font-weight: 1000;
@@ -115,6 +144,10 @@ input[type=submit] {
     transition: background, .2s;
 }
 
-.submitButton:hover {
-    background:  rgb(25, 71, 222)
+input[type=submit]:hover {
+    background:  rgb(25, 71, 222);
+}
+
+.demoUser {
+    margin-top: 12px;
 }

@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({currentUser, logout}) => {
     const loggedIn = () => {
-        debugger;
+        // debugger;
         return (
             <div className="loggedIn">
-                <h2>{currentUser.firstname + currentUser.lastname}</h2>
-                <button onClick={logout}>Sign Out</button>
+                <h2>{currentUser.email}</h2>
+                <button onClick={logout}>Out</button>
+                <Link className="signUpLink" to="/signup">Get started</Link>
             </div>
         )
     };
     
     const loggedOut = () => {
+        // debugger
        return (
             <div className="loggedOut">
                <Link className="signInLink" to="/signin">Sign in</Link>
@@ -20,9 +22,9 @@ const Nav = ({currentUser, logout}) => {
             </div>
        )
     };
-
+    // debugger
     return (
-        <nav className="navBarContainer">
+        <div className="navBarContainer">
             <div className="coinplaceLogoContainer">
                 <h2 className="coinplaceLogo">coinplace</h2>
             </div>
@@ -34,7 +36,7 @@ const Nav = ({currentUser, logout}) => {
             <div className="authContainer">
                 {currentUser ? loggedIn() : loggedOut()}
             </div>
-        </nav>
+        </div>
     )
 };
 
