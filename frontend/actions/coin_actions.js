@@ -8,8 +8,12 @@ export const fetch24HPrices = (symbol) => dispatch => {
     ))
 };
 
-const receive24HPrices = payload => ({
+const receive24HPrices = payload => {
+    let data = payload.Data.map(datum=>{
+        return {x: datum.time, y: datum.close }
+    })
+    return {
     type: RECEIVE_24H_PRICES,
-    data: payload.data,
-});
+    prices: data,
+}};
 
