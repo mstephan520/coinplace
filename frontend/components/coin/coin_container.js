@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signup } from '../../actions/session_actions';
-import SessionForm from './session_form';
+import coinDetail from './coin_detail';
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -10,4 +9,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)
+export default connect(mapStateToProps, mapDispatchToProps)(coinDetail)

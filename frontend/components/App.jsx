@@ -13,11 +13,11 @@ const App = () => {
             </Link>
             <Nav />
         </header> */}
-        
+        <Route exact path="/" component={SignupFormContainer} /> 
         <Route exact path="/signin" component={SigninFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/prices/:coinId" component={CoinShowContainer} />
-        <Route path="/prices" component={CoinShowContainer} />
+        {/* <Route path="/prices/:coinId" component={CoinShowContainer} /> */}
+        {/* <Route path="/prices" component={CoinShowContainer} /> */}
 
     </div>
     )

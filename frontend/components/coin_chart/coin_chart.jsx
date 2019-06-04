@@ -117,5 +117,6 @@
 // });
 
 
-// Chart.defaults.global.tooltips.titleAlign = 'center';
-// Chart.defaults.global.tooltips.bodyAlign = 'center';
+
+// // Chart.defaults.global.tooltips.titleAlign = 'center';
+// // Chart.defaults.global.tooltips.bodyAlign = 'center';
