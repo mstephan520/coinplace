@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
         if (this.state.demo) {
             user = {email: 'BuzzAldrin@apollo.11', password: 'magnificentdesolation'}
         }
-        debugger;
+        // debugger;
         this.props.processForm(user);
     }
  
